@@ -23,7 +23,7 @@ $(function () {
     });
 
     async function loadContent() {
-        let apiUrl = 'maurice.oeger.li/Letterbox-API';
+        let apiUrl = 'https://maurice.oeger.li/Letterbox-API';
 
         if (window.location.href.indexOf("localhost") > -1) {
             apiUrl = '../Letterbox-API';
