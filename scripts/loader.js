@@ -30,5 +30,6 @@ $(function () {
         }
 
         await getFolders(apiUrl);
+        await getMailList(apiUrl);
     }
 });
