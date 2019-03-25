@@ -1,0 +1,29 @@
+.btn{
+    text-decoration: none;
+    box-shadow: $low-box-shadow;
+    border-radius: 3px;
+    font-family: $text-font;
+    width: auto;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+
+    i{
+        padding: 0 5px 0 0;
+    }
+
+    p{
+        margin: 0;
+        padding: 0;
+    }
+
+    &.large{
+        padding: 5px 8px;
+    }
+
+    &.filled{
+        border: solid 2px $color-main;
+        color: $color-main;
+    }
+}

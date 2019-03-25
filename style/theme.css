@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Righteous");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+html.light-theme #header {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 100;
+}
+
+html.light-theme #header .logo-container {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.light-theme #header .logo-container a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+html.light-theme #header .logo-container a .logo-name {
+  font-family: "Righteous";
+  color: #304ffe;
+  margin: auto;
+  text-align: center;
+}
+
+html.light-theme #header .account-container {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.light-theme #header .account-container .account-name {
+  margin: auto;
+  font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
+}
+
+html.light-theme .btn {
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
+  width: auto;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+html.light-theme .btn i {
+  padding: 0 5px 0 0;
+}
+
+html.light-theme .btn p {
+  margin: 0;
+  padding: 0;
+}
+
+html.light-theme .btn.large {
+  padding: 5px 8px;
+}
+
+html.light-theme .btn.filled {
+  border: solid 2px #304ffe;
+  color: #304ffe;
+}
+
+html.light-theme html,
+html.light-theme body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+html.light-theme #main-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 50;
+}
+
+html.light-theme #main-container #sidebar {
+  height: 100%;
+  position: fixed;
+  border-right: solid 1px #cecece;
+  margin: 60px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20px 0 20px;
+}
+
+html.light-theme #main-container #sidebar .folder-container {
+  padding: 10px 30px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html.light-theme #main-container #sidebar .folder-container .folder {
+  margin: 10px 0 0 0;
+  color: #1e1e1e;
+  font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+html.light-theme #main-container #sidebar .folder-container .folder p {
+  margin: 0;
+}
+
+html.light-theme #main-container #sidebar .folder-container .folder:hover {
+  color: #0043ca;
+}
+
+html.light-theme #main-container #sidebar .folder-container .folder:focus, html.light-theme #main-container #sidebar .folder-container .folder:active, html.light-theme #main-container #sidebar .folder-container .folder.selected {
+  color: #536dfe;
+}
+
+html.light-theme #main-container #sidebar .folder-container .folder-template {
+  display: none;
+}
+
+html.dark-theme #header {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #e4e4e4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 100;
+}
+
+html.dark-theme #header .logo-container {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.dark-theme #header .logo-container a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+html.dark-theme #header .logo-container a .logo-name {
+  font-family: "Righteous";
+  color: #304ffe;
+  margin: auto;
+  text-align: center;
+}
+
+html.dark-theme #header .account-container {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html.dark-theme #header .account-container .account-name {
+  margin: auto;
+  font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
+}
+
+html.dark-theme .btn {
+  text-decoration: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
+  width: auto;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+html.dark-theme .btn i {
+  padding: 0 5px 0 0;
+}
+
+html.dark-theme .btn p {
+  margin: 0;
+  padding: 0;
+}
+
+html.dark-theme .btn.large {
+  padding: 5px 8px;
+}
+
+html.dark-theme .btn.filled {
+  border: solid 2px #304ffe;
+  color: #304ffe;
+}
+
+html.dark-theme html,
+html.dark-theme body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+html.dark-theme #main-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 50;
+}
+
+html.dark-theme #main-container #sidebar {
+  height: 100%;
+  position: fixed;
+  border-right: solid 1px #cecece;
+  margin: 60px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20px 0 20px;
+}
+
+html.dark-theme #main-container #sidebar .folder-container {
+  padding: 10px 30px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html.dark-theme #main-container #sidebar .folder-container .folder {
+  margin: 10px 0 0 0;
+  color: #1e1e1e;
+  font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+html.dark-theme #main-container #sidebar .folder-container .folder p {
+  margin: 0;
+}
+
+html.dark-theme #main-container #sidebar .folder-container .folder:hover {
+  color: #0043ca;
+}
+
+html.dark-theme #main-container #sidebar .folder-container .folder:focus, html.dark-theme #main-container #sidebar .folder-container .folder:active, html.dark-theme #main-container #sidebar .folder-container .folder.selected {
+  color: #536dfe;
+}
+
+html.dark-theme #main-container #sidebar .folder-container .folder-template {
+  display: none;
+}
+/*# sourceMappingURL=theme.css.map */

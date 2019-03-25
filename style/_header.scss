@@ -1,0 +1,41 @@
+#header{
+    height: $header-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bgcolor-main;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: $low-box-shadow;
+    z-index: 100;
+
+    .logo-container{
+        padding: 0 20px;
+        display: flex;
+
+        a{
+            text-decoration: none;
+            display: flex;
+            height: auto;
+
+            .logo-name{
+                font-family: $logo-font;
+                color: $color-main; 
+                margin: auto;
+                text-align: center;
+            }
+        }
+    }
+
+    .account-container{
+        padding: 0 10px;
+        display: flex;
+
+        .account-name{
+            margin: auto;
+            font-family: $text-font;
+        }
+    }
+}
