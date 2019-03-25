@@ -7,16 +7,16 @@
     margin: 0;
 }
 
-html{
+html {
     @include fullSize;
 }
 
-html.light-theme{
+html.light-theme {
     @import 'themes/dark';
     @import 'main';
 }
 
-html.dark-theme{
+html.dark-theme {
     @import 'themes/light';
     @import 'main';
 }
