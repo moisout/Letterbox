@@ -7,7 +7,7 @@ async function getMailList(apiUrl) {
         dataType: "json",
         success: function (response) {
             const mailData = response;
-            loadFolders(mailData);
+            loadMailList(mailData);
         }
     });
 }
@@ -17,10 +17,10 @@ async function loadMailList(mailData) {
         let mailEntry = $('.mail-list-template').clone();
         mailEntry.css('display', 'block');
         mailEntry.removeClass('mail-list-template');
-        mailEntry.children('.mail-list-text').text(mailData.title);
-        mailEntry.children('.mail-list-sender').text(mailData.sender);
+        mailEntry.children('.mail-list-text').text(element.title);
+        mailEntry.children('.mail-list-sender').text(element.sender);
         mailEntry.prop('id', `mail-entry-${index}`);
         mailEntry.appendTo('.mail-list-container');
-        console.log(mailEntry);
+        console.log(mailData);
     }); 
 }

@@ -66,7 +66,7 @@ html.light-theme .btn {
   text-decoration: none;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
   width: auto;
   cursor: pointer;
@@ -123,7 +123,6 @@ html.light-theme #main-container {
 
 html.light-theme #main-container #sidebar {
   height: 100%;
-  position: fixed;
   border-right: solid 1px #cecece;
   margin: 60px 0 0 0;
   display: -webkit-box;
@@ -156,6 +155,7 @@ html.light-theme #main-container #sidebar .folder-container .folder {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  font-size: 1.05rem;
 }
 
 html.light-theme #main-container #sidebar .folder-container .folder p {
@@ -171,6 +171,62 @@ html.light-theme #main-container #sidebar .folder-container .folder:focus, html.
 }
 
 html.light-theme #main-container #sidebar .folder-container .folder-template {
+  display: none;
+}
+
+html.light-theme #main-container #main-list {
+  margin: 60px 0 0 0;
+  width: 350px;
+  height: 100%;
+}
+
+html.light-theme #main-container #main-list .mail-list-container {
+  border-right: solid 1px #cecece;
+  background-color: #fff;
+  height: 100%;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail {
+  margin: 0;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail .mail-list-sender {
+  padding: 10px 0 0 10px;
+  color: #1e1e1e;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail .mail-list-text {
+  padding: 10px 0 10px 10px;
+  color: #303030;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail:after {
+  content: "";
+  height: 1px;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  border-bottom: solid 1px #cecece;
+  display: block;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail:hover {
+  background-color: #304ffe5D;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail:focus, html.light-theme #main-container #main-list .mail-list-container .mail:active, html.light-theme #main-container #main-list .mail-list-container .mail.selected {
+  background-color: #304ffe2D;
+}
+
+html.light-theme #main-container #main-list .mail-list-container .mail-list-template {
   display: none;
 }
 
@@ -234,7 +290,7 @@ html.dark-theme .btn {
   text-decoration: none;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: "Noto Sans", "Roboto", Arial, "Sans Serif";
   width: auto;
   cursor: pointer;
@@ -291,7 +347,6 @@ html.dark-theme #main-container {
 
 html.dark-theme #main-container #sidebar {
   height: 100%;
-  position: fixed;
   border-right: solid 1px #cecece;
   margin: 60px 0 0 0;
   display: -webkit-box;
@@ -324,6 +379,7 @@ html.dark-theme #main-container #sidebar .folder-container .folder {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  font-size: 1.05rem;
 }
 
 html.dark-theme #main-container #sidebar .folder-container .folder p {
@@ -339,6 +395,62 @@ html.dark-theme #main-container #sidebar .folder-container .folder:focus, html.d
 }
 
 html.dark-theme #main-container #sidebar .folder-container .folder-template {
+  display: none;
+}
+
+html.dark-theme #main-container #main-list {
+  margin: 60px 0 0 0;
+  width: 350px;
+  height: 100%;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container {
+  border-right: solid 1px #cecece;
+  background-color: #fff;
+  height: 100%;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail {
+  margin: 0;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail .mail-list-sender {
+  padding: 10px 0 0 10px;
+  color: #1e1e1e;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail .mail-list-text {
+  padding: 10px 0 10px 10px;
+  color: #303030;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  white-space: nowrap;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail:after {
+  content: "";
+  height: 1px;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  border-bottom: solid 1px #cecece;
+  display: block;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail:hover {
+  background-color: #304ffe5D;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail:focus, html.dark-theme #main-container #main-list .mail-list-container .mail:active, html.dark-theme #main-container #main-list .mail-list-container .mail.selected {
+  background-color: #304ffe2D;
+}
+
+html.dark-theme #main-container #main-list .mail-list-container .mail-list-template {
   display: none;
 }
 /*# sourceMappingURL=theme.css.map */

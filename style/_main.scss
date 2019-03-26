@@ -18,7 +18,6 @@ body {
 
     #sidebar {
         height: 100%;
-        position: fixed;
         border-right: $container-border;
         margin: $header-height 0 0 0;
         display: flex;
@@ -36,6 +35,7 @@ body {
                 font-family: $text-font;
                 user-select: none;
                 cursor: pointer;
+                font-size: 1.05rem;
 
                 p {
                     margin: 0;
@@ -46,7 +46,7 @@ body {
                 }
 
                 &:focus,
-                &:active,
+                &:active, 
                 &.selected {
                     color: $color-light;
                 }
@@ -56,7 +56,63 @@ body {
                 display: none;
             }
         }
+    }
 
+    #main-list{
+        margin: $header-height 0 0 0;
+        width: $mail-list-width;
+        height: 100%;
 
+        .mail-list-container{
+            border-right: $container-border;
+            background-color: $bgcolor-light;
+            height: 100%;
+
+            .mail{
+                margin: 0;
+
+                .mail-list-sender{
+                    padding: 10px 0 0 10px;
+                    color: $textcolor-main;
+                    font-size: 0.9rem;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: #{$mail-list-width - 50px};
+                    white-space: nowrap;
+                }
+
+                .mail-list-text{
+                    padding: 10px 0 10px 10px;
+                    color: $textcolor-light;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: #{$mail-list-width - 50px};
+                    white-space: nowrap;
+                }
+
+                &:after{
+                    content: "";
+                    height: 1px;
+                    width: calc(100% - 20px);
+                    margin: 0 auto;
+                    border-bottom: $container-border;
+                    display: block;
+                }
+
+                &:hover{
+                    background-color: #{$color-main + "5D"};
+                }
+
+                &:focus,
+                &:active, 
+                &.selected {
+                    background-color: #{$color-main + "2D"};
+                }
+            }
+
+            .mail-list-template {
+                display: none;
+            }
+        }
     }
 }
