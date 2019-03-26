@@ -21,6 +21,5 @@ async function loadMailList(mailData) {
         mailEntry.children('.mail-list-sender').text(element.sender);
         mailEntry.prop('id', `mail-entry-${index}`);
         mailEntry.appendTo('.mail-list-container');
-        console.log(mailData);
     }); 
 }

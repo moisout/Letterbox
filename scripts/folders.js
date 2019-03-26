@@ -18,7 +18,6 @@ async function loadFolders(folderNames){
         folder.text(element);
         folder.prop('id', `folder-${index}`);
         folder.appendTo('.folder-container');
-        console.log(folder);
     });
 
     $('#folder-0').addClass('selected');

@@ -1,4 +1,4 @@
-.btn{
+.btn {
     text-decoration: none;
     box-shadow: $low-box-shadow;
     border-radius: 5px;
@@ -8,22 +8,33 @@
     user-select: none;
     display: flex;
     flex-direction: row;
+    transition: box-shadow 300ms $intro-cubic-bezier;
 
-    i{
+    i {
         padding: 0 5px 0 0;
     }
 
-    p{
+    p {
         margin: 0;
         padding: 0;
     }
 
-    &.large{
+    &.large {
         padding: 5px 8px;
     }
 
-    &.filled{
+    &.filled {
         border: solid 2px $color-main;
         color: $color-main;
+    }
+
+    &:hover {
+        box-shadow: $medium-box-shadow;
+    }
+
+    &:focus,
+    &:active {
+        box-shadow: $low-box-shadow;
+        transition: box-shadow 100ms $outro-cubic-bezier;
     }
 }

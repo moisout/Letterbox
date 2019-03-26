@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'header';
 @import 'buttons';
+@import 'loading';
 
 html,
 body {
@@ -17,12 +18,13 @@ body {
     z-index: 50;
 
     #sidebar {
-        height: 100%;
+        height: $content-height;
         border-right: $container-border;
         margin: $header-height 0 0 0;
         display: flex;
         flex-direction: column;
         padding: 20px 20px 0 20px;
+        box-sizing: border-box;
 
         .folder-container {
             padding: 10px 30px 0 0;
@@ -61,7 +63,7 @@ body {
     #main-list{
         margin: $header-height 0 0 0;
         width: $mail-list-width;
-        height: 100%;
+        height: $content-height;
 
         .mail-list-container{
             border-right: $container-border;
@@ -70,11 +72,12 @@ body {
 
             .mail{
                 margin: 0;
+                font-family: $text-font;
 
                 .mail-list-sender{
                     padding: 10px 0 0 10px;
                     color: $textcolor-main;
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     max-width: #{$mail-list-width - 50px};
@@ -84,6 +87,7 @@ body {
                 .mail-list-text{
                     padding: 10px 0 10px 10px;
                     color: $textcolor-light;
+                    font-size: 0.9rem;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     max-width: #{$mail-list-width - 50px};

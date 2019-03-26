@@ -10,4 +10,7 @@ $textcolor-main: #1e1e1e;
 $textcolor-light: #303030;
 $textcolor-dark: #000000;
 
+$highlight-color: #d3d3d3;
+$highlight-color-themed: #{$color-main + "2D"};
+
 $textcolor-inv: #fff;

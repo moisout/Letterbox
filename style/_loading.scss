@@ -1,0 +1,67 @@
+.loading-animation{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    .loading-circle{
+        width: 5px;
+        height: 5px;
+        margin: auto 0;
+        border-radius: 50%;
+        border: solid 5px $color-main;
+        border-start-end-radius: 50%;
+        z-index: 18;
+        box-sizing: border-box;
+    }
+
+    .loading-circle-1{
+        animation: circle-1 1s $intro-cubic-bezier infinite;
+    }
+
+    .loading-circle-2{
+        animation: circle-2 1s $intro-cubic-bezier infinite;
+    }
+
+    .loading-circle-3{
+        animation: circle-2 1s $intro-cubic-bezier infinite;
+    }
+
+    .loading-circle-4{
+        animation: circle-3 1s $intro-cubic-bezier infinite;
+    }
+
+    &.inactive{
+        display: none;
+    }
+}
+
+@keyframes circle-1{
+    0%{
+        transform: scale(0) translateX(0);
+    }
+    100%{
+        transform: scale(1) translateX(125%);
+    }
+}
+@keyframes circle-2{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(125%);
+    }
+}
+@keyframes circle-3{
+    0%{
+        transform: scale(1) translateX(0);
+    }
+    100%{
+        transform: scale(0) translateX(125%);
+    }
+}

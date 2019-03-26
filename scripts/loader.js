@@ -31,5 +31,7 @@ $(function () {
 
         await getFolders(apiUrl);
         await getMailList(apiUrl);
+
+        $('.loading-animation').fadeOut();
     }
 });
