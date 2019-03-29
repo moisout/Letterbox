@@ -1,0 +1,44 @@
+@media only screen and (max-width: 700px) {
+    .menu-btn-mobile{
+        display: flex !important;
+    }
+
+    #sidebar{
+        position: absolute;
+    }
+
+    #main-list{
+        width: 100% !important;
+
+        .mail-list-container{
+
+            .mail{
+
+                .mail-list-sender, .mail-list-text{
+                    max-width: calc(100% - 20px) !important;
+                }
+            }
+        }
+
+    }
+
+    .drag-container{
+        display: block !important;
+    }
+
+    #main-content{
+        display: none;
+    }
+}
+
+.slide-out {
+    transition-property: transform, left, right, width, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: $outro-cubic-bezier;
+}
+
+.slide-in {
+    transition-property: transform, left, right, width, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: $intro-cubic-bezier;
+}

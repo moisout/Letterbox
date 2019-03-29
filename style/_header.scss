@@ -15,6 +15,17 @@
         padding: 0 20px;
         display: flex;
 
+        .menu-btn-mobile{
+            display: none;
+            padding: 10px 20px 10px 0;
+            cursor: pointer;
+            color: $color-main;
+
+            i{
+                margin: auto;
+            }
+        }
+
         a{
             text-decoration: none;
             display: flex;

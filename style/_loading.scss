@@ -8,6 +8,7 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
 
     .loading-circle{
         width: 5px;

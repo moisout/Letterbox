@@ -7,14 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Letterbox</title>
     <link rel="stylesheet" href="style/theme.css">
+    <link rel="stylesheet" href="resources/jquery-ui.min.css">
     <script src="resources/jquery-3.3.1.min.js"></script>
+    <script src="resources/jquery-ui.min.js"></script>
+    <script src="resources/jquery.ui.touch-punch.js"></script>
     <script src="scripts/loader.js"></script>
 </head>
 
 <body>
     <div id="header">
         <div class="logo-container">
-            <a href="#">
+            <div class="menu-btn-mobile">
+                <i class="material-icons">menu</i>
+            </div>
+            <a href="./index.html">
                 <h1 class="logo-name">Letterbox</h1>
             </a>
         </div>
@@ -36,6 +42,9 @@
                     <p>Replace</p>
                 </div>
             </div>
+        </div>
+        <div class="drag-container">
+            <div class="drag-menu"></div>
         </div>
         <div id="main-list">
             <div class="mail-list-container">

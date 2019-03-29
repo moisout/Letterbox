@@ -2,6 +2,7 @@
 @import 'header';
 @import 'buttons';
 @import 'loading';
+@import 'mobile';
 
 html,
 body {
@@ -25,6 +26,8 @@ body {
         flex-direction: column;
         padding: 20px 20px 0 20px;
         box-sizing: border-box;
+        z-index: 10;
+        background-color: $bgcolor-light;
 
         .folder-container {
             padding: 10px 30px 0 0;
@@ -48,7 +51,7 @@ body {
                 }
 
                 &:focus,
-                &:active, 
+                &:active,
                 &.selected {
                     color: $color-light;
                 }
@@ -60,21 +63,48 @@ body {
         }
     }
 
-    #main-list{
+    .drag-container {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        user-select: none;
+        display: none;
+        z-index: 9;
+
+        .drag-menu {
+            background-color: #0000003a;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 20px;
+            z-index: 11;
+            pointer-events: stroke;
+            opacity: 0;
+        }
+    }
+
+
+    #main-list {
         margin: $header-height 0 0 0;
         width: $mail-list-width;
         height: $content-height;
+        z-index: 8;
+        transition: width 300ms $intro-cubic-bezier;
 
-        .mail-list-container{
+        .mail-list-container {
             border-right: $container-border;
             background-color: $bgcolor-light;
             height: 100%;
 
-            .mail{
+            .mail {
                 margin: 0;
                 font-family: $text-font;
 
-                .mail-list-sender{
+                .mail-list-sender {
                     padding: 10px 0 0 10px;
                     color: $textcolor-main;
                     font-size: 1rem;
@@ -84,7 +114,7 @@ body {
                     white-space: nowrap;
                 }
 
-                .mail-list-text{
+                .mail-list-text {
                     padding: 10px 0 10px 10px;
                     color: $textcolor-light;
                     font-size: 0.9rem;
@@ -94,7 +124,7 @@ body {
                     white-space: nowrap;
                 }
 
-                &:after{
+                &:after {
                     content: "";
                     height: 1px;
                     width: calc(100% - 20px);
@@ -103,12 +133,12 @@ body {
                     display: block;
                 }
 
-                &:hover{
+                &:hover {
                     background-color: #{$color-main + "5D"};
                 }
 
                 &:focus,
-                &:active, 
+                &:active,
                 &.selected {
                     background-color: #{$color-main + "2D"};
                 }

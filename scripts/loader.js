@@ -2,7 +2,8 @@ $(function () {
 
     let components = [
         'main',
-        'folders'
+        'folders',
+        'mobile'
     ];
 
     let loadCount = 0;
@@ -31,6 +32,8 @@ $(function () {
 
         await getFolders(apiUrl);
         await getMailList(apiUrl);
+
+        bindMobileHandler();
 
         $('.loading-animation').fadeOut();
     }

@@ -35,6 +35,17 @@ html.light-theme #header .logo-container {
   display: flex;
 }
 
+html.light-theme #header .logo-container .menu-btn-mobile {
+  display: none;
+  padding: 10px 20px 10px 0;
+  cursor: pointer;
+  color: #304ffe;
+}
+
+html.light-theme #header .logo-container .menu-btn-mobile i {
+  margin: auto;
+}
+
 html.light-theme #header .logo-container a {
   text-decoration: none;
   display: -webkit-box;
@@ -137,6 +148,7 @@ html.light-theme .loading-animation {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
+  z-index: 100;
 }
 
 html.light-theme .loading-animation .loading-circle {
@@ -241,6 +253,51 @@ html.light-theme .loading-animation.inactive {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  html.light-theme .menu-btn-mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  html.light-theme #sidebar {
+    position: absolute;
+  }
+  html.light-theme #main-list {
+    width: 100% !important;
+  }
+  html.light-theme #main-list .mail-list-container .mail .mail-list-sender, html.light-theme #main-list .mail-list-container .mail .mail-list-text {
+    max-width: calc(100% - 20px) !important;
+  }
+  html.light-theme .drag-container {
+    display: block !important;
+  }
+  html.light-theme #main-content {
+    display: none;
+  }
+}
+
+html.light-theme .slide-out {
+  -webkit-transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: transform, left, right, width, opacity;
+  transition-property: transform, left, right, width, opacity, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(0.62, 0.12, 1, 0.7);
+          transition-timing-function: cubic-bezier(0.62, 0.12, 1, 0.7);
+}
+
+html.light-theme .slide-in {
+  -webkit-transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: transform, left, right, width, opacity;
+  transition-property: transform, left, right, width, opacity, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(0.46, 0, 0.33, 1);
+          transition-timing-function: cubic-bezier(0.46, 0, 0.33, 1);
+}
+
 html.light-theme html,
 html.light-theme body {
   height: 100%;
@@ -275,6 +332,8 @@ html.light-theme #main-container #sidebar {
   padding: 20px 20px 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 10;
+  background-color: #fff;
 }
 
 html.light-theme #main-container #sidebar .folder-container {
@@ -316,10 +375,40 @@ html.light-theme #main-container #sidebar .folder-container .folder-template {
   display: none;
 }
 
+html.light-theme #main-container .drag-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+  z-index: 9;
+}
+
+html.light-theme #main-container .drag-container .drag-menu {
+  background-color: #0000003a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20px;
+  z-index: 11;
+  pointer-events: stroke;
+  opacity: 0;
+}
+
 html.light-theme #main-container #main-list {
   margin: 60px 0 0 0;
   width: 350px;
   height: calc(100% - 60px);
+  z-index: 8;
+  -webkit-transition: width 300ms cubic-bezier(0.46, 0, 0.33, 1);
+  transition: width 300ms cubic-bezier(0.46, 0, 0.33, 1);
 }
 
 html.light-theme #main-container #main-list .mail-list-container {
@@ -401,6 +490,17 @@ html.dark-theme #header .logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+html.dark-theme #header .logo-container .menu-btn-mobile {
+  display: none;
+  padding: 10px 20px 10px 0;
+  cursor: pointer;
+  color: #304ffe;
+}
+
+html.dark-theme #header .logo-container .menu-btn-mobile i {
+  margin: auto;
 }
 
 html.dark-theme #header .logo-container a {
@@ -505,6 +605,7 @@ html.dark-theme .loading-animation {
   left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
+  z-index: 100;
 }
 
 html.dark-theme .loading-animation .loading-circle {
@@ -576,6 +677,51 @@ html.dark-theme .loading-animation.inactive {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  html.dark-theme .menu-btn-mobile {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  html.dark-theme #sidebar {
+    position: absolute;
+  }
+  html.dark-theme #main-list {
+    width: 100% !important;
+  }
+  html.dark-theme #main-list .mail-list-container .mail .mail-list-sender, html.dark-theme #main-list .mail-list-container .mail .mail-list-text {
+    max-width: calc(100% - 20px) !important;
+  }
+  html.dark-theme .drag-container {
+    display: block !important;
+  }
+  html.dark-theme #main-content {
+    display: none;
+  }
+}
+
+html.dark-theme .slide-out {
+  -webkit-transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: transform, left, right, width, opacity;
+  transition-property: transform, left, right, width, opacity, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(0.62, 0.12, 1, 0.7);
+          transition-timing-function: cubic-bezier(0.62, 0.12, 1, 0.7);
+}
+
+html.dark-theme .slide-in {
+  -webkit-transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: left, right, width, opacity, -webkit-transform;
+  transition-property: transform, left, right, width, opacity;
+  transition-property: transform, left, right, width, opacity, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: cubic-bezier(0.46, 0, 0.33, 1);
+          transition-timing-function: cubic-bezier(0.46, 0, 0.33, 1);
+}
+
 html.dark-theme html,
 html.dark-theme body {
   height: 100%;
@@ -610,6 +756,8 @@ html.dark-theme #main-container #sidebar {
   padding: 20px 20px 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 10;
+  background-color: #fff;
 }
 
 html.dark-theme #main-container #sidebar .folder-container {
@@ -651,10 +799,40 @@ html.dark-theme #main-container #sidebar .folder-container .folder-template {
   display: none;
 }
 
+html.dark-theme #main-container .drag-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+  z-index: 9;
+}
+
+html.dark-theme #main-container .drag-container .drag-menu {
+  background-color: #0000003a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20px;
+  z-index: 11;
+  pointer-events: stroke;
+  opacity: 0;
+}
+
 html.dark-theme #main-container #main-list {
   margin: 60px 0 0 0;
   width: 350px;
   height: calc(100% - 60px);
+  z-index: 8;
+  -webkit-transition: width 300ms cubic-bezier(0.46, 0, 0.33, 1);
+  transition: width 300ms cubic-bezier(0.46, 0, 0.33, 1);
 }
 
 html.dark-theme #main-container #main-list .mail-list-container {
